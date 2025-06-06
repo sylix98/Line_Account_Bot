@@ -43,4 +43,4 @@ def handle_message(event):
 # 初始化資料庫並啟動伺服器
 if __name__ == "__main__":
     init_db()
-    app.run()
+    app.run(host="0.0.0.0", port=10000)
