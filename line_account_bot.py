@@ -22,9 +22,10 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    user_id = event.source.user_id()
     msg = event.message.text.strip()
     if msg.startswith("查今天"):
-        records = today_records()
+        records = today_records(user_id)
         if not records:
             reply = "今天還沒有記帳紀錄。"
         else:
@@ -33,7 +34,7 @@ def handle_message(event):
         try:
             category, amount = msg.split()
             amount = int(amount)
-            add_record(category, amount)
+            add_record(user_id, category, amount)
             reply = f"已記下：{category} {amount} 元"
         except:
             reply = "格式錯誤！請用「午餐 100」記帳，或輸入「查今天」查詢"
