@@ -22,7 +22,7 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    user_id = event.source.user_id()
+    user_id = event.source.user_id
     msg = event.message.text.strip()
     if msg.startswith("查今天"):
         records = today_records(user_id)
