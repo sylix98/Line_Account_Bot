@@ -34,7 +34,9 @@ def handle_message(event):
         if not records:
             reply = "今天還沒有記帳紀錄。"
         else:
-            reply = "\n".join([f"{r[0]}: {r[1]} 元" for r in records])
+            total = sum([r[1] for r in records])
+            detail = "\n".join([f"{r[0]}: {r[1]} 元" for r in records])
+            reply = f"{detail}\n今日總支出{total}元"
     else:
         try:
             category, amount = msg.split()
