@@ -1,6 +1,7 @@
 # LINE 記帳機器人
 
-本專案為使用 Python + Flask + SQLite + LINE Messaging API 所打造的 LINE 記帳機器人，支援多用戶記帳與查詢功能，部署於 Render 雲端平台，並透過 UptimeRobot 保持常駐運作。
+本專案為使用 Python + Flask + SQLite + LINE Messaging API 所打造的 LINE 記帳機器人，支援多用戶記帳與查詢功能，部署於 Render 雲端平台，並透過 UptimeRobot 保持常駐運作。\
+演示影片：
 
 ## 功能特色
 
@@ -69,5 +70,3 @@ Line記帳小助手 @311wyyeh\
 - 本專案僅用於個人練習用途，尚未進行帳號驗證與進階安全控制！
 - 目前預計可擴充功能如「月份統計」、「雲端資料庫」、「LINE rich menu」等。
 ---
-
-演示影片：
